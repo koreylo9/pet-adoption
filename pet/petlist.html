@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fa/css/all.min.css">
+    <style>
+
+.logo img{
+            width: 100px;
+            float: left;
+        } 
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .nav-wrapper{
+            width: 100%;
+            margin-top: -50px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 100px;
+        }
+
+        .nav{
+            height: 100px;
+            margin-top: 50px;
+            background-color:#659DBD;
+        }
+
+        .pet-nav, .home, .find-pets, .petcare, .user-info li, .m-user li, .m-pet li{
+            float: left;
+        }
+/* 
+        .m-user{
+            visibility: hidden;
+        }
+
+        .m-pet{
+            visibility: hidden;
+        } */
+
+        .nav li {
+            display: inline;
+            color: white;
+        }
+
+        .nav a{
+            display: block;
+            color:white;
+            padding: 0px 30px;
+            text-decoration: none;
+        }
+
+        .user-info a{
+            padding: 0;
+        }
+
+        .user-info .register{
+            margin-right: 30px;
+        }
+
+        .user-info{
+            margin-right: 30px;
+        }
+        
+
+        .pet-nav{
+            font-size: 24px;
+        }
+
+        .pet-nav a:hover{
+            background-color:rgba(255, 255,255, .2);
+        }
+
+
+        .m-pet a:hover, .m-user a:hover, .user-info a:hover{
+            color: #DAAD86;
+        }
+
+
+        .m-pet, .m-user, .user-info{
+            float: right;
+        }
+
+
+        .find-pets:hover > .petlist{
+            visibility: visible;
+        }
+
+
+        /* .petlist{
+            position: absolute;
+            visibility: hidden;
+            width: 167px;
+            background-color: #659DBD; 
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            opacity: 1;
+        } */
+
+        .petlist li {
+            height: 50px;
+        }
+
+        main{
+            width: 100%;
+            margin: 0;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* background-color: darkgreen; */
+        }
+
+        .info{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            /* background-color: blueviolet; */
+            margin-top: 10px;
+            margin-bottom: 20px;
+            /* margin: 20px auto; */
+            margin: 20px;
+        }
+
+
+        #pet-count{
+            width:680px;
+            float: left;
+            /* background-color: yellowgreen; */
+        }
+
+        #user{
+            float: right;
+            margin-right: 50px;
+            color: #8D8741;
+        }
+
+        #pet-count ul{
+            list-style-type: none;
+            /* margin-left: 20px;   */
+        }
+
+        #pet-count li{
+            float: left;
+            /* margin-right: 80px; */
+        }
+
+        .left{
+            margin-right: 80px;
+        }
+
+        #pet-count button, #pet-count i{
+            line-height: 40px;
+            font-size: 16px;
+        }
+
+        #pet-count button{
+            border: 1px solid white;
+            background-color: white;
+            /* color:#659DBD; */
+            color: #8D8741;
+        }
+
+        .menu{
+            width: 100%;
+            height: 50px;
+            /* background-color: darkgrey; */
+        }
+
+        .menu .searchbar{
+            float: left;
+            width: 900px;
+            /* height: 50px; */
+            line-height: 50px;
+            margin-left: 20px;
+            /* background-color: darkkhaki; */
+        }
+
+        .searchbar #search{
+            width: 500px;
+            height: 47px;
+            color:#659DBD;
+
+            /* line-height: 40px; */
+            font-size: 16px;
+            padding-left: 10px;
+            border-radius: 10px;
+            border: 1px solid #659DBD;
+            /* margin: -8px; */
+        }
+
+        /* #search-condition{
+            color: white;
+            text-align: center;
+            border-radius: 0;
+            border: none;
+            height: 50px;
+            background-color: #659DBD;
+
+        } */
+
+        #search-button{
+            color:white;
+            height: 50px;
+            width: 50px;
+            font-size: large;
+            background-color: #659DBD;
+            border-radius: 10px;
+            border: 1px solid #659DBD;
+        }
+
+        .menu .add{
+            float: right;
+            width: 100px;
+            /* height: 50px; */
+            line-height: 50px;
+            /* background-color: darkmagenta; */
+            margin-right: 20px;
+        }
+
+        .add button{
+            overflow: hidden;
+            width: 100px;
+            height: 40px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #659DBD;
+            background-color: #659DBD;
+            color: white;
+        }
+
+   
+
+        .petlist{
+            width: 100%;
+            /* height: 460px; */
+            /* background-color: chocolate; */
+        }
+
+        table{
+            border-radius: 10px;
+            background-color: #659DBD;
+            /* background-color: rgba(250, 250, 250, .2); */
+            color: white;
+        }
+
+        .petlist table{
+            width: 1380px;
+            margin: 20px auto;
+            /* background-color: darkseagreen; */
+        }
+
+        td, th {
+            padding: 5px;
+            width: 10px;
+            text-align: left;
+            border-bottom: 1px dotted rgba(250, 250, 250, .2);
+            border-collapse: collapse;
+        } 
+
+        .pet-image{
+            float: left;
+        }
+
+        .pet-id, .pet-name{
+            padding-top: 7px;
+        }
+
+        .span-id{            
+            padding-left: 10px;
+        }
+
+        .pet-name{
+            float: left;
+        }
+
+        .petlist a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .petlist a:hover{
+            color:#BC986A;
+        }
+
+        .delete{
+            text-align: end;
+        }
+
+        .page-buttons{
+            width: 250px;
+            height: 40px;
+            /* background-color: darkviolet; */
+            margin: 10px auto;
+        }
+
+        .page-buttons button{
+            width: 100px;
+            line-height: 25px;
+            font-size: 14px;
+            border-radius: 10px;
+            border: 1px solid #659DBD;
+            background-color: #659DBD;
+            color: white;
+        }
+
+        .page-buttons #previous{
+            float: left;
+        }
+
+        .page-buttons #next{
+            float: right;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-wrapper">
+            <div class="logo">
+                <img src="./image/logo.png" alt="">
+            </div> 
+            <div class="nav">
+                <ul class="pet-nav">
+                    <li><a class="home" href="javascript:;">Home</a></li>
+    
+    
+                  
+                    <li class="find-pets">
+                        <a class="pets" href="javascript:;">
+                            Find a pet
+                            <div class="petlist">
+                                <!-- <ul>
+                                    <li><a href="javascript:;">Find a Dog</a></li>
+                                    <li><a href="javascript:;">Find a Cat</a></li>
+                                    <li><a href="javascript:;">Find Other Pets</a></li>
+                                </ul> -->
+                            </div>
+                        </a>
+    
+                    </li>
+                    <li class="petcare"><a href="javascript:;">Pet care Blog</a></li>
+                </ul>
+        
+                <ul class="user-info">
+                    <!-- <li><a href="javascript:;">Login</li></a></li>
+                    <li> &nbsp;/&nbsp;</li>
+                    <li class="register"><a href="javascript:;">Register</li></a></li> -->
+                    <li><a href="./index.html">Sign out</a> </li>
+                </ul>
+    
+                <ul class="m-pet">
+                    <li><a href="javascript:;">Pet Management</a></li>
+                </ul>
+     
+                <ul class="m-user">
+                    <li><a href="javascript:;">User Management</a></li>
+                </ul>
+    
+        
+    
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="info">
+            <div id="pet-count">
+                <ul>
+                    <li class="left"><button>All (6)</button></li>
+                    <li class="left"><button><i class="fas fa-paw"></i>&nbsp;&nbsp;Dog (2)</button></li>
+                    <li class="left"><button><i class="fas fa-cat"></i></i>&nbsp;&nbsp;Cat (4)</button></li>
+                    <li class="right"><button><i class="fas fa-frog"></i>&nbsp;&nbsp;Other Pets (0)</button></li>
+                </ul>
+            </div>
+   
+            <div id="user"><i class="fas fa-user-alt">&nbsp;&nbsp;</i>
+                Administrator</div>
+        </div>
+
+
+
+         <div></div>
+         <div class="menu">
+             <div class="searchbar">                
+                 <input type="text" name="search" id="search" placeholder="Pet ID, or Orangazation ID">
+
+                 <button id="search-button"><i class="fas fa-search"></i></button>
+             </div>
+             
+             <div class="add">
+                <button onclick="location.href='./add-pet.html'">Add pet</button>
+             </div>
+         </div>
+     
+         <div class="petlist">
+            <table >
+                <tr>
+
+                   <th>Pet ID / Name</th>
+                    <th>Type</th>
+                    <th></th>
+                    <th></th>
+                    <th>Organization ID</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+           
+                <!-- <tr>
+                  <th class="image">Image</th>
+                  <th>Pet ID</th>
+                  <th>Pet Name</th>
+                  <th>Type</th>
+                  <th>Organization ID</th>
+                  <th></th>
+                </tr> -->
+            <tr>
+                  <td class="image">
+                      <img class="pet-image" src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/49337430/1/?bust=1601853419\u0026width=100" style="width: 50px; height: 60px;">
+                        <div class="pet-id">
+                            <!-- <span class="span-id">ID: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;49337430
+                        </div>
+                        <div class="pet-name">
+                            <!-- <span class="span-id">Name: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;Nala
+
+                        </div>
+                  </td>
+                  <td>Dog</td>
+                  <td></td>
+                  <td></td>
+                  <td>OK26</td>
+                 <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="delete"><a href="./update-pet.html">Edit</a> / <a href="javascript:;">Delete</a></td>
+                </tr>
+
+
+                <tr>
+                    <td class="image">
+                        <img class="pet-image" src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/49337456/2/?bust=1601853550\u0026width=100" style="width: 50px; height: 60px;">
+                        <div class="pet-id">
+                            <!-- <span class="span-id">ID: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp; 49337456
+                        </div>
+                        <div class="pet-name">
+                            <!-- <span class="span-id">Name: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp; Georgie
+                        </div>
+                    </td>
+                    <td>Dog</td>
+                    <td></td>
+                    <td></td>
+                    <td>IL805</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td class="delete">
+                        <a href="./update-pet.html">Edit</a> 
+                        / 
+                        <a href="javascript:;">Delete</a></td>
+                </tr>
+
+                <tr>
+                    <td class="image">
+                        <img class="pet-image" src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/49337313/3/?bust=1601853560\u0026width=100" style="width: 50px; height: 60px;">
+                        <div class="pet-id">
+                            <!-- <span class="span-id">ID: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;49337313
+                        </div>
+                        <div class="pet-name">
+                            <!-- <span class="span-id">Name: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;Thor
+
+                        </div>
+                    
+                    </td>
+                    <td>Cat</td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td>CA2805</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="delete"><a href="javascript:;">Edit</a> / <a href="javascript:;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td class="image">
+                        <img class="pet-image" src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/49337433/1/?bust=1601853368\u0026width=100" style="width: 50px; height: 60px;">
+                        <div class="pet-id">
+                            <!-- <span class="span-id">ID: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;49337433
+                        </div>
+                        <div class="pet-name">
+                            <!-- <span class="span-id">Name: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;Korbin
+
+                        </div>
+                    </td>
+                    <td>Cat</td>
+                    <td></td>
+                    <td></td>
+                  
+                    <td>NY203</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="delete"><a href="javascript:;">Edit</a> / <a href="javascript:;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td class="image">
+                        <img class="pet-image" src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/49337418/1/?bust=1601853227\u0026width=100" style="width: 50px; height: 60px;">
+                        <div class="pet-id">
+                            <!-- <span class="span-id">ID: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp; 49337418
+                        </div>
+                        <div class="pet-name">
+                            <!-- <span class="span-id">Name: </span> -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;Jesse
+
+                        </div>
+                    </td>
+                    
+                    <td>Cat</td>
+                    <td></td>
+                    <td></td>
+                    <td>NJ353</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="delete"><a href="javascript:;">Edit</a> / <a href="javascript:;">Delete</a></td>
+                </tr>
+                <tr>
+                    <td class="image">
+                        <img class="pet-image" src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/49337435/1/?bust=1601853465\u0026width=100" style="width: 50px; height: 60px;">
+                        <div class="pet-id">
+                       
+                            &nbsp;&nbsp;&nbsp;&nbsp;49337435
+                        </div>
+                        <div class="pet-name">
+             
+                            &nbsp;&nbsp;&nbsp;&nbsp; Rita
+
+                        </div>
+                    </td>
+                    <td>Cat</td>
+                    <td></td>
+                    <td></td>
+                    <td>CA163</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="delete"><a href="javascript:;">Edit</a> / <a href="javascript:;">Delete</a></td>
+                </tr> 
+       
+              </table>
+         </div>
+
+         <div class="page-buttons">
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>   
+         </div>
+    </main>
+
+    
+</body>
+</html>

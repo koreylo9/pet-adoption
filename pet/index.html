@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            overflow: hidden;
+            background-image: url('./image/3.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .logo img{
+            width: 100px;
+            float: left;
+        } 
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .nav-wrapper{
+            width: 100%;
+            margin-top: -50px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 100px;
+        }
+
+        .nav{
+            height: 100px;
+            margin-top: 50px;
+            background-color:#659DBD;
+        }
+
+        .pet-nav, .home, .find-pets, .petcare, .user-info li, .m-user li, .m-pet li{
+            float: left;
+        }
+/* 
+        .m-user{
+            visibility: hidden;
+        }
+
+        .m-pet{
+            visibility: hidden;
+        } */
+
+        .nav li {
+            display: inline;
+            color: white;
+        }
+
+        .nav a{
+            display: block;
+            color:white;
+            padding: 0px 30px;
+            text-decoration: none;
+        }
+
+        .user-info a{
+            padding: 0;
+        }
+
+        .user-info .register{
+            margin-right: 30px;;
+        }
+
+        .pet-nav{
+            font-size: 24px;
+        }
+
+        .pet-nav a:hover{
+            background-color:rgba(255, 255,255, .2);
+        }
+
+
+        .m-pet a:hover, .m-user a:hover, .user-info a:hover{
+            color: #DAAD86;
+        }
+
+
+        .m-pet, .m-user, .user-info{
+            float: right;
+        }
+
+
+        .find-pets:hover > .petlist{
+            visibility: visible;
+        }
+
+
+        .petlist{
+            position: absolute;
+            visibility: hidden;
+            width: 167px;
+            background-color: #659DBD; 
+            font-size: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            opacity: 1;
+        }
+
+        .petlist li {
+            height: 50px;
+        }
+
+
+
+        .logo-words{
+            width: 1200px;
+            color: rgba(255, 255,255, .6);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 30px auto;
+            z-index: 0;
+        } 
+
+        .logo-words #big{
+            font-size: 40px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .logo-words #small{
+            font-size: 30px;
+            font-style: oblique;
+            text-align: end;
+        }
+
+
+        .search{
+            width: 700px;
+            height: 600px;      
+            margin: 0px auto;
+        }
+
+        .search-box{
+            width: 700px;
+            height: 460px;
+            margin-top: 10px;
+            background-color:rgba(255, 255,255, .2);
+        }
+
+        .search-box{
+            padding-top: 10px;
+            margin: 0px auto;
+        }
+
+        .search-box p{
+            text-align: center;
+        }
+
+        .search-box  a{
+            font-size: 28px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .form-wrapper {
+            margin: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+            font-style: normal;
+        }
+        .form-wrapper .full-input {
+            height: 55px;
+            padding: 5px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-wrapper input{
+            width: 590px;
+            line-height: 40px;
+            outline: none;
+            border: none;
+            display:block;
+            line-height: 1.2em;
+            font-size: 16pt;
+            padding-left: 5px;
+            font-size: 14pt;
+            color: #659DBD;
+            padding: 10px;
+        }
+
+        .form-wrapper select{
+            width: 100%;
+            height: 40px;
+            outline: none;
+            border: none;
+            display:block;
+            line-height: 1.2em;
+            font-size: 14pt;
+            color: #659DBD;
+            padding: 10px;
+        }
+
+        .form-wrapper label{
+            display: block;
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 2px;
+            font-style: normal;     
+            font-style: normal;
+            color: white;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        
+
+        .form-wrapper button{
+            margin-top: 35px;
+            width: 100%;
+            line-height: 50px;
+            font-size: 24px;
+            background-color: #659DBD; 
+            color:white;
+            border: 1px solid #659DBD;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="nav-wrapper">
+        <div class="logo">
+            <img src="./image/logo.png" alt="">
+        </div> 
+        <div class="nav">
+            <ul class="pet-nav">
+                <li><a class="home" href="./index.html">Home</a></li>
+
+
+              
+                <li class="find-pets">
+                    <a class="pets" href="javascript:;">
+                        Find a pet
+                        <div class="petlist">
+                            <ul>
+                                <li><a href="javascript:;">Find a Dog</a></li>
+                                <li><a href="javascript:;">Find a Cat</a></li>
+                                <li><a href="javascript:;">Find Other Pets</a></li>
+                            </ul>
+                        </div>
+                    </a>
+
+                </li>
+                <li class="petcare"><a href="javascript:;">Pet care Blog</a></li>
+            </ul>
+    
+            <ul class="user-info">
+                <li><a href="javascript:;">Login</li></a></li>
+                <li> &nbsp;/&nbsp;</li>
+                <li class="register"><a href="javascript:;">Register</li></a></li>
+            </ul>
+
+            <ul class="m-pet">
+                <li><a href="./petlist.html">Pet Management</a></li>
+            </ul>
+ 
+            <ul class="m-user">
+                <li><a href="javascript:;">User Management</a></li>
+            </ul>
+
+    
+
+        </div>
+    </div>
+
+    <div class="logo-words">
+        <div id="big">Helping you find your new best friend</div>
+        <div id="small">from more than 1000 shelters</div>
+    </div> 
+
+    <div class="search">        
+    <div class="search-box">
+
+        <p><a href="javascript:;">Shelters Or Rescues</a></p>
+
+        <hr>
+
+
+        <div class="form-wrapper">
+
+            <div class='full-input'><label for='location'>Location</label>
+              <input type='text' name='location' placeholder="Enter City, State, or Zip"></input></div>
+
+            <div class='full-input'><label for='location'>Distance</label>
+              
+                <select name="distance" id="distance" value="2">
+                    <option value="1">35 Miles or less</option>
+                    <option value="2">50 Miles or less</option>
+                    <option value="3">75 Miles or less</option>
+                    <option value="4">100 Miles or less</option>
+                </select>
+
+            </div>
+
+              <div class='full-input'><label for='shelter'>Shelters With</label>
+                <select name="shelter" id="shelter" value="2">
+                    <option value="1">Any</option>
+                    <option value="2">Dogs</option>
+                    <option value="3">Cats</option>
+                    <option value="4">Other pets</option>
+                </select>
+            </div>
+
+              <button>Search</button>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
