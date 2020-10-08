@@ -1,0 +1,59 @@
+/* Toggler border color */
+.navbar-toggler {
+    border-color: white;
+}
+
+
+.navbar {
+    background-color: #659DBD;
+}
+
+#logo {
+    width:50px;
+    height:50px;
+}
+
+/* Color of text on links */
+.nav-link, .navbar-brand { 
+    color: white;
+}
+
+/* Lines color in toggler */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* This is for making dropdowns on hover*/ 
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.container-fluid{
+    padding-top:60px;
+}
+
+.form-group{
+    text-align:center;
+}
+
+.displayResults {
+    padding-left:35px;
+    padding-right: 35px;
+}
+
+.searchBar {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.petBox img {
+    
+        max-width: 100%;
+        max-height: 100%;
+    
+}
+
+/* Background color of boxes under pet images */
+.card-body, .list-group-item{
+    background-color: #fbeec1;
+}
