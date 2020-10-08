@@ -9,8 +9,9 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
-
+  <!-- Required Javascript files to run Bootstrap-->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -19,12 +20,15 @@
   
 </head>
 <body>
+  <!-- NavBar-->
   <nav class="navbar navbar-expand-lg">
+    <!-- Logo -->
     <a class="navbar-brand" href="#"><img src="image/logo.png" id="logo"><span class="sr-only>(current) pl-2"></span>PetQuest</a>
+    <!-- Toggler button for collapsed navbar -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#petNav" aria-controls="petNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+  <!-- Links on the navbar plus also makes it collapse into toggler-->
     <div class="collapse navbar-collapse" id="petNav">
       <ul class="navbar-nav mr-auto mt-1 mt-lg-0">
         <div class="nav-item dropdown">
@@ -46,8 +50,10 @@
       </div>
     </div>
   </nav>
+  <!-- Body content split into two sections one for search area other for search results -->
   <div class="container-fluid">
     <div class="row">
+      <!-- Search bars area -->
         <div class="col searchBar">
           <form>
               <div class="form-group">
@@ -82,6 +88,7 @@
               </div>
           </form>
         </div>
+        <!-- Search Results Area -->
         <div class="col-9 displayResults">
                 <div class="card-columns mb-5">
                     <div class="card">
@@ -129,52 +136,10 @@
                       </ul>
                     </div>
                   </div>
-                  <!-- <div class="card-deck mb-5">
-                    <div class="card">
-                      <img src="images/puppy1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Pet Name</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Breed</li>
-                        <li class="list-group-item">Age</li>
-                        <li class="list-group-item">Location</li>
-                      </ul>
-                    </div>
-                    <div class="card">
-                      <img src="images/puppy1.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Pet Name</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Breed</li>
-                        <li class="list-group-item">Age</li>
-                        <li class="list-group-item">Location</li>
-                      </ul>
-                    </div>
-                    <div class="card">
-                      <img src="images/puppy2.jpeg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Pet Name</h5>
-                      </div>
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Breed</li>
-                        <li class="list-group-item">Age</li>
-                        <li class="list-group-item">Location</li>
-                      </ul>
-                    </div>
-                  </div> -->
-
             </div>
         </div>
     </div>
   </div>
-
-
-  <!-- API Key
-  pCk50HHMTK5sVxWuZ4oiI8ivuiefV5WFVmLdrLybUM5H65R3pY 
-  Secret
-  Hpan02u7BIRSCymvHDwAl6krjwoy75JziCWDaTIS -->
 
 
 </body>
