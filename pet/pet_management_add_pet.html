@@ -128,11 +128,19 @@
 
         main{
             width: 100%;
-            /* margin-top: 30px; */
+            margin-top: 30px;
             font-family: Arial, Helvetica, sans-serif;          
         }
 
+        .back-nav a{
+            margin-left: 20px;
+            font-size: 20px;
+            color:#8D8741;
+        }
 
+        .back-nav a:hover{
+            color:#BC986A; 
+        }  
 
         .form-table{ 
             width: 100%;
@@ -231,27 +239,6 @@
             border-radius: 10px;
         }
 
-        .nav-m{
-            width: 900px;
-            height: 30px;
-            margin-top: 20px;
-            margin-left: 10px;
-            color:#8D8741
-        }
-
-        .nav-m a{
-            color:#8D8741;
-        }
-
-        .nav-m #p-info{
-            text-decoration: none;
-        }
-
-        .nav-m #pm:hover{
-            color:#BC986A; 
-        } 
-
-
         .load-image{
             border: 2px solid #659DBD;
             background-color:#659DBD;
@@ -292,7 +279,7 @@
 
         <!-- /* ************* Navigation Bar ************* */ -->
         <div class="navbar">
-            <a href="javascript:;">Home</a>
+            <a href="./index.html">Home</a>
             <div class="dropdown">
               <button class="petlist-btn">Find a Pet </button>
               <div class="findpet-list">
@@ -309,7 +296,7 @@
                 <li id="user-manage"><a href="javascript:;"><i class="fas fa-users"></i>&nbsp;User Management</a></li>                   
                 <li id="pet-manage"><a href="./pet_management.html"><i class="fas fa-paw"></i>&nbsp; Pet Management</a></li>
                  <li id="login"> 
-                     <a href="">
+                     <a href="./index.html">
                         <i class="fas fa-user"></i>&nbsp;
                         Sign Out
                      </a>
@@ -321,9 +308,8 @@
 
     <main>
 
-        <div class="nav-m">
-            <a id="pm" href="./pet_management.html" style="text-decoration: underline;"> Pet Management</a> /
-            <a id="p-info" href="">Add a Pet</a>
+        <div class="back-nav">
+            <a href="./pet_management.html"> <i class="fas fa-angle-left"></i>&nbsp;&nbsp;back </a>
         </div>
 
         <div class="form-table">
