@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Required Javascript files to run Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#"><img src="image/logo.png" id="logo"><span class="sr-only>(current) pl-2"></span>PetQuest</a>
+        <!-- Toggler button for collapsed navbar -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#petNav" aria-controls="petNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links on the navbar plus also makes it collapse into toggler-->
+        <div class="collapse navbar-collapse" id="petNav">
+            <ul class="navbar-nav mr-auto mt-1 mt-lg-0">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Find a Pet
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Find a Dog</a>
+                        <a class="dropdown-item" href="#">Find a Cat</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Other Pets</a>
+                    </div>
+                </div>
+                <a class=" nav-item nav-link" href="#">Pet Care</a>
+            </ul>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="#">Sign Up</a>
+                <a class="nav-item nav-link" href="#">Login</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row blogSearch">
+            <!-- Search bars area -->
+            <div class="col-2 searchOption">
+                <select class="form-control">
+                    <option>General</option>
+                    <option>Dogs</option>
+                    <option>Cats</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="col-10 searchBar">
+                <!-- Search form -->
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div>
+
+        </div>
+            <!-- Search Results Area -->
+
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-title text-center">
+                        How to Teach a Dog Tricks
+                    </div>
+                    <div class="card-text">
+                        <embed src = "image/exampleBlog.txt" width="100%" height="1000" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
